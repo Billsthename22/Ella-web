@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Slideshow with Background Music</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Arial, sans-serif; text-align: center; background: #000; color: white; }
+        .slideshow-container { position: relative; max-width: 600px; margin: auto; }
+        .video-container { display: none; }
+        video { width: 100%; border-radius: 10px; }
+        .prev, .next {
+            position: absolute; top: 50%; transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.7); color: white;
+            padding: 10px; border: none; cursor: pointer;
+        }
+        .prev { left: 10px; }
+        .next { right: 10px; }
+        .music-controls {
+            margin-top: 20px;
+            display: flex; justify-content: center; align-items: center;
+        }
+        .music-controls button {
+            background: #ff0057; color: white; padding: 10px;
+            border: none; border-radius: 5px; cursor: pointer;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <audio id="backgroundMusic" loop>
+        <source src="Adekunle-Gold-Sade.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
+
+    <div class="slideshow-container">
+        <button class="prev" onclick="changeVideo(-1)">&#10094;</button>
+
+        <div class="video-container">
+            <video src="1E25F545-5FAD-430C-9D3D-8D126C19024A.MOV" controls></video>
+        </div>
+        <div class="video-container">
+            <video src="1EC0589F-B35E-470E-BC71-1CC745C68EEC.MOV" controls></video>
+        </div>
+        <div class="video-container">
+            <video src="9D9CF681-6918-4F68-849C-C454742C1B9F.MOV" controls></video>
+        </div>
+
+        <button class="next" onclick="changeVideo(1)">&#10095;</button>
+    </div>
+
+    <div class="music-controls">
+        <button onclick="toggleMusic()">🔊 Play / Pause Music</button>
+    </div>
+
+    <script>
+        let videoIndex = 0;
+        let videos = document.querySelectorAll(".video-container");
+        let music = document.getElementById("backgroundMusic");
+
+        function showVideo(index) {
+            // Reset video index if out of bounds
+            if (index >= videos.length) { videoIndex = 0; }
+            if (index < 0) { videoIndex = videos.length - 1; }
+
+            videos.forEach(video => video.style.display = "none");
+            videos[videoIndex].style.display = "block";
+
+            let currentVideo = videos[videoIndex].querySelector("video");
+            currentVideo.currentTime = 0; // Restart video
+            currentVideo.play().catch(error => console.log("Video autoplay blocked."));
+        }
+
+        function changeVideo(n) {
+            let currentVideo = videos[videoIndex].querySelector("video");
+            currentVideo.pause();
+            videoIndex += n;
+            showVideo(videoIndex);
+        }
+
+        function toggleMusic() {
+            if (music.paused) {
+                music.play();
+            } else {
+                music.pause();
+            }
+        }
+
+        window.onload = function () {
+            music.muted = true; // Start muted to bypass autoplay restrictions
+            music.play().then(() => {
+                setTimeout(() => {
+                    music.muted = false; // Unmute after a short delay
+                }, 1000);
+            }).catch(error => {
+                console.log("Autoplay blocked. User interaction needed.");
+            });
+
+            showVideo(videoIndex);
+        };
+    </script>
+
+</body>
+</html>

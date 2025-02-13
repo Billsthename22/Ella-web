@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Sugar</title>
+    <link rel="stylesheet" href="romantic-style.css">
+</head>
+<body>
+    <h1>Welcome Sugar</h1>
+    <div class="icons">
+        <button class="icon-button" onclick="goToPage('memories.html')">📸 Memories</button>
+        <button class="icon-button" onclick="goToPage('gallery.html')">🖼️ Gallery</button>
+        <button class="icon-button" onclick="goToPage('valentine.html')">❤️ Valentine</button>
+    </div>
+    
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('imageModal')">&times;</span>
+            <img src="special-image.jpg" alt="Special Image" class="modal-image">
+        </div>
+    </div>
+    
+    <!-- Valentine Message Modal -->
+    <div id="valentineModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('valentineModal')">&times;</span>
+            <h2>💖 My Love 💖</h2>
+            <p>You are my sweetest blessing. Happy Valentine's Day, Sugar! 💕</p>
+        </div>
+    </div>
+    <div class="dashboard">
+        <div class="moods">
+            <div class="mood" onclick="goToPage('happy.html')">
+                <h2>Happy</h2>
+                <p>Feeling joyful and blessed!</p>
+                <audio controls>
+                    <source src="Beth-Mirrors-Acoustic-via-Naijafinix.com_.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="mood" onclick="goToPage('love.html')">
+                <h2>In Love</h2>
+                <p>Every heartbeat is for you!</p>
+                <audio controls>
+                    <source src="Beth-Mirrors-Acoustic-via-Naijafinix.com_.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="mood" onclick="goToPage('dreamy.html')">
+                <h2>Dreamy</h2>
+                <p>Lost in sweet thoughts of us.</p>
+                <audio controls>
+                    <source src="Beth-Mirrors-Acoustic-via-Naijafinix.com_.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="mood" onclick="goToPage('excited.html')">
+                <h2>Excited</h2>
+                <p>Counting down to our next adventure!</p>
+                <audio controls>
+                    <source src="Adekunle-Gold-Sade.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="mood" onclick="goToPage('grateful.html')">
+                <h2>Grateful</h2>
+                <p>Thankful for every moment with you.</p>
+                <audio controls>
+                    <source src="Adekunle-Gold-Sade.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="mood" onclick="goToPage('calm.html')">
+                <h2>Calm</h2>
+                <p>Embracing peace and serenity.</p>
+                <audio controls>
+                    <source src="Adekunle-Gold-Sade.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="mood" onclick="goToPage('nostalgic.html')">
+                <h2>Nostalgic</h2>
+                <p>Remembering our sweetest memories.</p>
+                <audio controls>
+                    <source src="Beth-Mirrors-Acoustic-via-Naijafinix.com_.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="mood" onclick="goToPage('cheerful.html')">
+                <h2>Cheerful</h2>
+                <p>Smiling from ear to ear!</p>
+                <audio controls>
+                    <source src="Beth-Mirrors-Acoustic-via-Naijafinix.com_.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="mood" onclick="goToPage('sad.html')">
+                <h2>Sad</h2>
+                <p>Missing you a little extra today.</p>
+                <audio controls>
+                    <source src="Beth-Mirrors-Acoustic-via-Naijafinix.com_.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "flex";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        function goToPage(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Gallery</title>
+    <style>
+        /* Fullscreen container */
+        body {
+            background: #121212;
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden; /* Prevent scrolling */
+            padding: 10px;
+        }
+
+        /* Video container */
+        .video-container {
+            background: #252525;
+            padding: 8px;
+            border-radius: 6px;
+            box-shadow: 0 0 5px rgba(255, 105, 180, 0.5);
+            width: 22%;  /* Smaller size */
+            height: 25vh; /* Fixed height to fit within 100vh */
+            margin: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Hover effect */
+        .video-container:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(255, 105, 180, 0.8);
+        }
+
+        /* Video styling */
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the video fills its container */
+            border-radius: 6px;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 1024px) {
+            .video-container {
+                width: 30%; /* Adjust for tablets */
+                height: 20vh;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .video-container {
+                width: 45%; /* Adjust for smaller screens */
+                height: 18vh;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .video-container {
+                width: 90%; /* Full width for phones */
+                height: 20vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="video-container">
+        <video src="1E25F545-5FAD-430C-9D3D-8D126C19024A.MOV" controls></video>
+    </div>
+    <div class="video-container">
+        <video src="1EC0589F-B35E-470E-BC71-1CC745C68EEC.MOV" controls></video>
+    </div>
+    <div class="video-container">
+        <video src="9D9CF681-6918-4F68-849C-C454742C1B9F.MOV" controls></video>
+    </div>
+    <div class="video-container">
+        <video src="13A50573-99C6-45C1-BBEF-5D3AD71F5BD0.MOV" controls></video>
+    </div>
+    <div class="video-container">
+        <video src="042F5181-2F1D-4018-88DB-2E3334214884.MOV" controls></video>
+    </div>
+    <div class="video-container">
+        <video src="743B8E42-4363-4FA1-95A3-D0A6962F9535.MP4" controls></video>
+    </div>
+    <div class="video-container">
+        <video src="ACCAC2B0-B224-4CC4-817D-C77E7E285996.MOV" controls></video>
+    </div>
+    <div class="video-container">
+        <video src="AFAEFE37-E7A8-454D-858B-AEF86D65F8B0.MOV" controls></video>
+    </div>
+    <div class="video-container">
+        <video src="B31C85C7-73D4-4664-9F05-D6603CFFA32A.MOV" controls></video>
+    </div>
+    <div class="video-container">
+        <video src="B67F039B-EFA9-4B9F-A9CA-F79F34F1EF6A.MOV" controls></video>
+    </div>
+    <div class="video-container">
+        <video src="cm-chat-media-video-1:096e6cd9-a70e-5f0e-964b-897e66bd24c6:55679:5:0.MOV" controls></video>
+    </div>
+    <div class="video-container">
+        <video src="D4B30A69-383C-477B-A5BE-5D647B902285.MOV" controls></video>
+    </div>
+    <div class="video-container">
+        <video src="D4CC496A-4CEA-49C0-A098-C9213D131867.MOV" controls></video>
+    </div>
+    <div class="video-container">
+        <video src="E7173CA3-8BF5-45B0-AEB0-3BD581A3F65C.MOV" controls></video>
+    </div>
+    <div class="video-container">
+        <video src="filtered-8E0500DF-C888-4FF0-87D4-9B5BCA7B6E0C.MP4" controls></video>
+    </div>
+    <div class="video-container">
+        <video src="filtered-A2AA4AB4-67C2-436E-9BA7-53278C81AF4E.MP4" controls></video>
+    </div>
+
+</body>
+</html>
