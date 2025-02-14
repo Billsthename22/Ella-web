@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="ring.css">
+
+</head>
+<body>
+
+    <div class="ring">
+        <div class="login">
+            <h2>Login</h2>
+            <div class="inputBx">
+                <input type="text" id="username" placeholder="Username">
+            </div>
+            <div class="inputBx">
+                <input type="password" id="password" placeholder="Password">
+            </div>
+            <div class="inputBx">
+                <input type="submit" value="Login" onclick="checkLogin()">
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden Popup -->
+    <div class="popup" id="valPopup">
+        <h2>Will you be my Val? I know it's late. 💕</h2>
+        <button class="yes-btn" onclick="goToDashboard()">Yes</button>
+        <button class="no-btn" onclick="goToLogin()">No</button>
+    </div>
+
+    <script>
+        function checkLogin() {
+            let password = document.getElementById("password").value;
+            
+            if (password === "january22") {
+                document.getElementById("valPopup").style.display = "flex"; // Show popup
+            } else {
+                alert("Incorrect password. Try again.");
+            }
+        }
+
+        function goToDashboard() {
+            window.location.href = "dashboard2..html";
+        }
+
+        function goToLogin() {
+            window.location.href = "login.html";
+        }
+    </script>
+
+</body>
+</html>

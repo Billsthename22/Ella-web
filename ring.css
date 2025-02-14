@@ -1,0 +1,204 @@
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login {
+    position: relative;
+    width: 260px; /* We reduced the width of the form */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* We reduced the space between elements */
+}
+
+.login h2 {
+    font-size: 1.8em; /* We slightly reduced the font size of the title */
+    color: #fff;
+    text-align: center;
+}
+
+.login .inputBx {
+    position: relative;
+    width: 100%;
+}
+
+.login .inputBx input {
+    position: relative;
+    width: 100%;
+    padding: 10px 0px; /* We reduced the padding */
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 30px; /* We adjusted the border to make it proportional to the size */
+    font-size: 1em; /* We reduced the font size */
+    color: #fff;
+    box-shadow: none;
+    outline: none;
+    text-align: center; /* To center the text inside the input */
+}
+
+.login .inputBx input[type="submit"] {
+    width: 100%; /* We ensure it is the same width as the inputs */
+    padding: 10px 15px; /* Same as the other inputs */
+    background: linear-gradient(45deg, #ff357a, #fff172);
+    border: none;
+    border-radius: 30px; /* Same as the other inputs */
+    font-size: 1em; /* Same as the other inputs */
+    cursor: pointer;
+}
+
+.login .inputBx input::placeholder {
+    color: rgba(255, 255, 255, 0.759);
+}
+
+.login .links {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px; /* We reduced the padding slightly */
+}
+
+.login .links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9em; /* We reduced the font size */
+}
+
+.ring {
+    position: relative;
+    width: 400px; /* We reduced the size of the ring */
+    height: 400px; /* We reduced the size of the ring */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ring i {
+    position: absolute;
+    inset: 0;
+    border: 2px solid #fff;
+    transition: 0.5s;
+}
+
+.ring i:nth-child(1) {
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    animation: animate 6s linear infinite;
+}
+
+.ring i:nth-child(2) {
+    border-radius: 41% 44% 56% 59% / 38% 62% 63% 37%;
+    animation: animate 4s linear infinite;
+}
+
+.ring i:nth-child(3) {
+    border-radius: 41% 44% 56% 59% / 38% 62% 63% 37%;
+    animation: animate2 10s linear infinite;
+}
+
+.ring:hover i {
+    border: 6px solid var(--clr);
+    filter: drop-shadow(0 0 20px var(--clr));
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.dashboard {
+    text-align: center;
+    background: #1e1e1e;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    width: 80%;
+    max-width: 700px;
+}
+
+h1 {
+    font-size: 2em;
+    color: #00ffff;
+}
+
+.widgets {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.widget {
+    background: #2a2a2a;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
+    width: 30%;
+}
+
+.music-player {
+    margin-top: 20px;
+    background: #222;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+audio {
+    width: 100%;
+}
+* { box-sizing: border-box; }
+body { font-family: Arial, sans-serif; text-align: center; background: #000; color: white; }
+.ring {
+    display: flex; justify-content: center; align-items: center;
+    height: 100vh; flex-direction: column;
+}
+.login { background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 10px; }
+.inputBx { margin: 10px 0; }
+input { padding: 10px; border: none; border-radius: 5px; width: 200px; }
+input[type="submit"] { background: #ff0057; color: white; cursor: pointer; }
+input[type="submit"]:hover { background: #d9044d; }
+
+/* Canvas popup styles */
+.popup {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.8); display: none; justify-content: center;
+    align-items: center; flex-direction: column;
+}
+.popup h2 { color: white; }
+.popup button {
+    margin: 10px; padding: 10px 15px; border: none;
+    cursor: pointer; font-size: 16px;
+}
+.yes-btn { background: green; color: white; }
+.no-btn { background: red; color: white; }
